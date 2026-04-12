@@ -8,6 +8,11 @@ body {
     background-color: hsl(54, 77%, 71%);
 }
 
+#center-grid {
+    display: grid;
+    grid-template: 400px / 400px 600px 400px;
+}
+
 #main-title {
     margin-top: 25%;
     letter-spacing: 2.1em;
