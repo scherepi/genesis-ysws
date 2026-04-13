@@ -20,23 +20,49 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    z-index: -3;
+    z-index: 0;
 
     grid-template: repeat(6, 1fr) / repeat(8, 1fr);
+    grid-template-areas:  "a00 a01 a02 a03 a04 a05 a06 a07"
+                "a10 a11 a12 a13 a14 a15 a16 a17"
+                "a20 a21 a22 a23 a24 a25 a26 a27"
+                "a30 a31 a32 a33 a34 a35 a36 a37"
+                "a40 a41 a42 a43 a44 a45 a46 a47"
+                "a50 a51 a52 a53 a54 a55 a56 a57";
+    column-gap: 10px;
 }
 
 .eye-container {
     background-image: url("../data/eyefull.png");
+    background-position: center;
+    background-size: 93%;
+    background-repeat: no-repeat;
+    transition: filter 0.8s ease-in-out;
+}
+
+.eye-container:hover {
+    filter: invert();
 }
 
 #title-container {
     display: inline-flex;
-    
+    z-index: 1;
+
     justify-self: center;
     align-self: center;
 
     justify-items: center;
     align-items: center;
+    background-color: black;
+    border-radius: 20%;
+    box-shadow: inset 0 0 1em 0.2em white;
+    
+}
+
+#continue-button {
+    align-self: flex-end;
+    justify-self: center;
+    color: white;
 }
 
 #main-title {
@@ -46,7 +72,6 @@ body {
     font-family: 'Handjet', monospace;
     text-align: center;
     position: relative;
-    top: 40px;
 }
 
  
