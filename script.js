@@ -45,6 +45,6 @@ document.body.onload = () => {
     });
 
     document.getElementById("continue-button").addEventListener("click", () => {
-        window.location.assign(`http://${window.location.host}/about`);
+        window.location.assign(`${window.location.href}/about`);
     })
 }
