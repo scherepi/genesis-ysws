@@ -43,4 +43,8 @@ document.body.onload = () => {
     document.getElementById("scrolling-desc").addEventListener("animationiteration", () => {
         r.style.setProperty('--desc-offset', `${Math.floor(Math.random() * 40)}%`);
     });
+
+    document.getElementById("continue-button").addEventListener("click", () => {
+        window.location.assign(`http://${window.location.host}/about`);
+    })
 }
