@@ -66,6 +66,13 @@ function loadResources() {
 function loadRewards() {
     console.log("Loading rewards.");
     document.querySelectorAll(".eye-container, .labelElement").forEach((element) => { element.remove(); });
+    let rewardParagraph = document.createElement("p");
+    rewardParagraph.id = "rewardParagraph"
+    rewardParagraph.style.position = "fixed";
+    rewardParagraph.style.right = "15%";
+    rewardParagraph.style.bottom = "10%";
+    rewardParagraph.innerHTML = `use <a href="https://hackatime.hackclub.com">hackatime</a> to track your time!<br>9 hours for a Pi, 24 for a ZimaBoard!`;
+    document.body.appendChild(rewardParagraph);
     spawnEye(getLeftPos(), 50, "./data/rpi.jpg", "https://www.raspberrypi.com/products/raspberry-pi-5/", "A Raspberry Pi 5!");
     spawnEye(getRightPos(), 100, "./data/cmodule.png", "https://www.raspberrypi.com/products/raspberry-pi-5/", "A Pi 5 Compute Module!");
     spawnEye(getLeftPos(), 150, "./data/zboard.png", "https://shop.zimaspace.com/collections/all-products/products/zimaboard-232-single-board-computer-server-firewall-kit", "A ZimaBoard or LattePanda!");
@@ -76,6 +83,7 @@ document.body.onload = () => {
     document.getElementById("resources-button").addEventListener("mousedown", () => {
         if (currentDisplay == "resources") { return; }
         currentDisplay = "resources";
+        document.querySelectorAll("#rewardParagraph").forEach((element) => { element.remove(); })
         loadResources();
     });
     document.getElementById("rewards-button").addEventListener("mousedown", () => {
