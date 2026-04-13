@@ -36,8 +36,11 @@ function blinkRandom() {
 
 document.body.onload = () => {
     // trigger the initial transition by appending a class to the relevant elements
-    console.log("doc and script loaded");
     animateTitle();
     fillEyes();
     blinkRandom();
+    var r = document.querySelector(":root");
+    document.getElementById("scrolling-desc").addEventListener("animationiteration", () => {
+        r.style.setProperty('--desc-offset', `${Math.floor(Math.random() * 40)}%`);
+    });
 }
