@@ -9,7 +9,7 @@
 
 body {
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -97,6 +97,27 @@ p {
     font-size: 2em;
     padding: 3%;
     cursor: crosshair;
+}
+
+.eye-container {
+    width: 72px;
+    height: 72px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+.labelElement {
+    max-width: min(320px, calc(100vw - 24px));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.labelElement {
+    font-family: 'Anonymous Pro', monospace;
 }
 
 #buttons {
