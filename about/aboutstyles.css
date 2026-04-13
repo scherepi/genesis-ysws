@@ -94,7 +94,7 @@ p {
 .button {
     width: fit-content;
     height: fit-content;
-    font-size: 2em;
+    font-size: 1.5vw;
     padding: 3%;
     cursor: crosshair;
 }
