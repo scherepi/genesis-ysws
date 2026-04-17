@@ -55,7 +55,7 @@ body {
 }
 
 .eye-container {
-    background-image: url("../data/eyefull.png");
+    background-image: url("./data/eyefull.png");
     background-position: center;
     background-size: 93%;
     background-repeat: no-repeat;
@@ -120,7 +120,7 @@ body {
     min-width: 400px;
     min-height: 400px;
     display: inline;
-    background-image: url("../data/wing1.png");
+    background-image: url("./data/wing1.png");
     background-size: 400px;
     filter: invert();
     transform: rotateZ(45deg);
