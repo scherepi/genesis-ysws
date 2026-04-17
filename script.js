@@ -17,9 +17,9 @@ function fillEyes() {
             let eyeContainer = document.createElement("div")
             eyeContainer.id = `eye-${i}${j}`
             eyeContainer.classList.add("eye-container");
-            eyeContainer.style.backgroundImage = "url(./data/eyeopen.gif)";
+            eyeContainer.style.backgroundImage = "url(scherepi.github.io/genesis-ysws/data/eyeopen.gif)";
             eyeContainer.style.gridArea = `a${i}${j}`
-            setTimeout(() => { eyeContainer.style.backgroundImage = "url(./data/eyefull.png)"; }, 1000)
+            setTimeout(() => { eyeContainer.style.backgroundImage = "url(scherepi.github.io/genesis-ysws/data/eyefull.png)"; }, 1000)
             eyeGrid.appendChild(eyeContainer);
         }
     }
@@ -29,7 +29,7 @@ function blinkRandom() {
     setInterval(() => {
         let targetEye = document.getElementById(`eye-${Math.floor(Math.random() * 6)}${Math.floor(Math.random() * 8)}`);
         targetEye.style.backgroundImage = "url(./data/blink.gif)";
-        setTimeout(() => {targetEye.style.backgroundImage = "url(./data/eyefull.png)"}, 2000)
+        setTimeout(() => {targetEye.style.backgroundImage = "url(scherepi.github.io/genesis-ysws/data/eyefull.png)"}, 2000)
     },
     Math.random() * 6000)
 }
